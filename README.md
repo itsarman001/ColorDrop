@@ -61,12 +61,6 @@ yarn preview
 
 ---
 
-## 🖼️ Screenshots (optional)
-
-*Add screenshots or a demo GIF here once your UI is ready.*
-
----
-
 ## 📜 License
 
 This project is licensed under the [MIT License](LICENSE).
