@@ -1,9 +1,14 @@
 <template>
-  <div class="text-center">
-    <HomeImageHeading />
+  <div>
+    <h1 class="text-3xl font-bold text-uppercase">Pick Color From Image</h1>
+    <p class="mt-4 text-2xl font-semibold">
+      Create custom color palettes from any image. Simply upload an image or select one from the
+      gallery for inspiring color schemes available in HEX, RGB, HSB, and HSL color codes.
+    </p>
   </div>
+  <ImageCard class="mt-8" />
 </template>
 
 <script setup lang="ts">
-import HomeImageHeading from '@/components/home/HomeImageHeading.vue'
+import { ImageCard } from '@/components'
 </script>

@@ -1,7 +1,7 @@
 <template>
   <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex h-16 items-center justify-between">
-      <RouterLink to="/" class="text-2xl font-bold text-primary"> Color Picker </RouterLink>
+      <RouterLink to="/" class="text-2xl font-bold text-primary"> ColorDrop </RouterLink>
 
       <div class="hidden sm:flex sm:space-x-8">
         <DynamicLink
