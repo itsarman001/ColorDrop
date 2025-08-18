@@ -6,9 +6,16 @@
       gallery for inspiring color schemes available in HEX, RGB, HSB, and HSL color codes.
     </p>
   </div>
-  <ImageCard class="mt-8" />
+  <ImageCard>
+    <template #image-dropzone>
+      <ImageDropzone />
+    </template>
+    <template #tools>
+      <ImageTools />
+    </template>
+  </ImageCard>
 </template>
 
 <script setup lang="ts">
-import { ImageCard } from '@/components'
+import { ImageCard, ImageDropzone, ImageTools } from '@/components'
 </script>

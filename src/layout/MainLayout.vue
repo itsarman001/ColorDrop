@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-background text-foreground min-h-screen flex flex-col">
+  <div class="dark bg-background text-foreground min-h-screen flex flex-col">
     <header class="border-b border-border">
       <BaseHeader :navigation-items="NAVIGATION" />
     </header>

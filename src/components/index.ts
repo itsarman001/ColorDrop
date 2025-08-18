@@ -5,6 +5,7 @@ import BaseFooter from './layout/footer/BaseFooter.vue'
 // Color picker components
 import ImageCard from './color-picker/ImageCard.vue'
 import ImageDropzone from './color-picker/ImageDropzone.vue'
+import ImageTools from './color-picker/ImageTools.vue'
 
 // Ui components
 import Button from './ui/button/Button.vue'
@@ -13,4 +14,13 @@ import Input from './ui/input/Input.vue'
 // Icons
 import DropImageIcon from './icons/DropImageIcon.vue'
 
-export { BaseHeader, BaseFooter, ImageCard, ImageDropzone, Button, Input, DropImageIcon }
+export {
+  BaseHeader,
+  BaseFooter,
+  ImageCard,
+  ImageDropzone,
+  ImageTools,
+  Button,
+  Input,
+  DropImageIcon,
+}
