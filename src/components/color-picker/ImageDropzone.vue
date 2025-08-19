@@ -1,6 +1,8 @@
 <template>
   <div
     @paste="handlePaste"
+    @dragover.prevent
+    @drop="handleDrop"
     class="h-full w-full flex flex-col gap-4 p-8 border-2 border-dashed border-gray-300 rounded-lg"
   >
     <div>
@@ -41,6 +43,29 @@ const handleFileSelect = (event: Event) => {
 
 const handlePaste = (event: ClipboardEvent) => {
   const items = event.clipboardData?.items
+  if (!items) return
+
+  for (const item of items) {
+    if (!item.type.startsWith('image/')) continue
+
+    const file = item.getAsFile()
+    if (!file) continue
+
+    const reader = new FileReader()
+    reader.onload = ({ target }) => {
+      if (target?.result) {
+        selectedImage.value = target.result as string
+      }
+    }
+    reader.readAsDataURL(file)
+
+    break
+  }
+}
+
+const handleDrop = (event: DragEvent) => {
+  event.preventDefault()
+  const items = event.dataTransfer?.items
   if (!items) return
 
   for (const item of items) {
