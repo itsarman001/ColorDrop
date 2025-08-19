@@ -1,11 +1,14 @@
 <template>
-  <div class="h-full w-full flex flex-col gap-4 p-4">
+  <div
+    @paste="handlePaste"
+    class="h-full w-full flex flex-col gap-4 p-8 border-2 border-dashed border-gray-300 rounded-lg"
+  >
     <div>
       <DropImageIcon class="w-1/2 h-1/2 mx-auto" />
       <p class="text-center mt-4">
         Drop an image here, or paste an image with
-        <kbd class="border-2 rounded-full p-1 px-3">CTRL</kbd> +
-        <kbd class="border-2 rounded-full py-1 px-3">V</kbd>
+        <kbd class="bg-gray-400 text-white border-2 border-white rounded-full p-1 px-3">CTRL</kbd> +
+        <kbd class="bg-gray-400 text-white border-2 border-white rounded-full py-1 px-3">V</kbd>
       </p>
     </div>
     <Button class="mx-auto" @click="fileInput?.click()">Browse Files</Button>
@@ -33,6 +36,28 @@ const handleFileSelect = (event: Event) => {
       selectedImage.value = e.target?.result as string
     }
     reader.readAsDataURL(file)
+  }
+}
+
+const handlePaste = (event: ClipboardEvent) => {
+  const items = event.clipboardData?.items
+  if (!items) return
+
+  for (const item of items) {
+    if (!item.type.startsWith('image/')) continue
+
+    const file = item.getAsFile()
+    if (!file) continue
+
+    const reader = new FileReader()
+    reader.onload = ({ target }) => {
+      if (target?.result) {
+        selectedImage.value = target.result as string
+      }
+    }
+    reader.readAsDataURL(file)
+
+    break
   }
 }
 </script>
