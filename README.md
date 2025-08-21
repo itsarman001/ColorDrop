@@ -1,79 +1,75 @@
-# 🎨 ColorDrop
+# Nuxt Minimal Starter
 
-ColorDrop is a **modern, dark-mode friendly color picker tool** that lets you extract colors from images and generate beautiful palettes instantly.
-Built with **Vue 3 + Vite + Tailwind CSS (shadcn-inspired design system)**.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
----
+## Setup
 
-## ✨ Features
-
-* 🖼️ **Extract colors from images** – upload an image and get its dominant colors
-* 🎨 **Generate palettes** – create HEX, RGB, or HSL palettes instantly
-* 🌗 **Dark mode ready** – beautiful UI optimized for light & dark themes
-* 📋 **Copy to clipboard** – quickly grab HEX codes for your projects
-* ⚡ **Blazing fast** – powered by Vite + Vue 3 Composition API
-* 🔌 **Open-source & developer friendly**
-
----
-
-## 🚀 Tech Stack
-
-* [Vue 3](https://vuejs.org/) – reactive UI framework
-* [Vite](https://vitejs.dev/) – fast development & bundling
-* [Tailwind CSS](https://tailwindcss.com/) – utility-first styling
-* [shadcn-vue](https://shadcn-vue.com/) – beautiful, accessible UI components
-* [TypeScript](https://www.typescriptlang.org/) – type safety
-
----
-
-## 📦 Installation
-
-Clone the repository:
+Make sure to install dependencies:
 
 ```bash
-git clone https://github.com/itsarman001/ColorDrop.git
-cd ColorDrop
-```
+# npm
+npm install
 
-Install dependencies:
+# pnpm
+pnpm install
 
-```bash
+# yarn
 yarn install
+
+# bun
+bun install
 ```
 
-Start development server:
+## Development Server
+
+Start the development server on `http://localhost:3000`:
 
 ```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
 yarn dev
+
+# bun
+bun run dev
 ```
 
-Build for production:
+## Production
+
+Build the application for production:
 
 ```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
 yarn build
+
+# bun
+bun run build
 ```
 
-Preview build:
+Locally preview production build:
 
 ```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
 yarn preview
+
+# bun
+bun run preview
 ```
 
----
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 🙌 Contributing
-
-Contributions, issues, and feature requests are welcome!
-Feel free to fork this repo and submit a PR.
-
----
-
-## 💡 Inspiration
-
-ColorDrop was built as a fun side project to simplify color extraction and palette generation for designers and developers.
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
