@@ -1,5 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ImageUploadIndex from '@/components/ImageUpload/index.vue'
+</script>
 
 <template>
-  <main class="text-3xl font-bold underline">Hello World</main>
+  <main class="">
+    <image-upload-index />
+  </main>
 </template>
